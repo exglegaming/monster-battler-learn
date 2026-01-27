@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dsstlaea5k8aw"]
 
-[ext_resource type="Theme" uid="uid://bwqrj7njjbn07" path="res://ui/main.tres" id="2_trceg"]
+[ext_resource type="Theme" uid="uid://bwqrj7njjbn07" path="res://resources/ui/main.tres" id="2_trceg"]
 [ext_resource type="Script" uid="uid://b7eoh6vvt5ick" path="res://scripts/ui/battle_renderer.gd" id="3_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://dcj3mcthwqxte" path="res://scenes/mon_renderer_module.tscn" id="4_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://crpahbrk5mgcm" path="res://scenes/controls_menu.tscn" id="5_choun"]

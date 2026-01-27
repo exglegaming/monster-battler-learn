@@ -24,6 +24,10 @@ config/icon="res://icon.svg"
 Events="*res://scripts/infra/events.gd"
 GameRunner="*res://scripts/controller/game_runner.gd"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/viewport_width=1280
@@ -32,6 +36,15 @@ window/size/viewport_height=1040
 [dotnet]
 
 project/assembly_name="Let-s Build a Monster Battler"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "green",
+"res://resources/": "purple",
+"res://scenes/": "blue",
+"res://scripts/": "orange"
+}
 
 [rendering]
 

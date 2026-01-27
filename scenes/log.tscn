@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b5pwbmjdjsdbc"]
+
+[ext_resource type="Script" uid="uid://cxhwpgt3bxy43" path="res://scripts/ui/log.gd" id="1_spugk"]
+
+[node name="Log" type="ScrollContainer" unique_id=552462212 node_paths=PackedStringArray("content_container")]
+script = ExtResource("1_spugk")
+content_container = NodePath("Content")
+metadata/_tab_index = 0
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=2068924723]
+layout_mode = 2

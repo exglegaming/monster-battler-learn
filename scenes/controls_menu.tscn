@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://crpahbrk5mgcm"]
+
+[ext_resource type="Script" uid="uid://bjmv0bo5aupxs" path="res://scripts/ui/battle_menu.gd" id="1_n0kuk"]
+[ext_resource type="Script" uid="uid://c8c2ar3x10q7a" path="res://scripts/ui/option_panel.gd" id="2_knfhs"]
+
+[node name="ControlsMenu" type="Control" unique_id=173335556]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Menu" type="Control" parent="." unique_id=54103219 node_paths=PackedStringArray("select_fight", "select_run", "select_mon", "select_item", "select_back", "main_menu", "fight_menu", "item_menu", "mon_menu")]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n0kuk")
+select_fight = NodePath("MainControls/Fight")
+select_run = NodePath("MainControls/Run")
+select_mon = NodePath("MainControls/Monsters")
+select_item = NodePath("MainControls/Item")
+select_back = NodePath("OptionBack")
+main_menu = NodePath("MainControls")
+fight_menu = NodePath("Fight")
+item_menu = NodePath("Items")
+mon_menu = NodePath("Monsters")
+
+[node name="MainControls" type="GridContainer" parent="Menu" unique_id=218992038]
+visible = false
+layout_mode = 0
+offset_right = 95.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="Fight" type="Button" parent="Menu/MainControls" unique_id=925636884]
+texture_filter = 1
+layout_mode = 2
+text = "> FIGHT"
+alignment = 0
+
+[node name="Item" type="Button" parent="Menu/MainControls" unique_id=796833517]
+texture_filter = 1
+layout_mode = 2
+text = "> ITEM"
+alignment = 0
+
+[node name="Monsters" type="Button" parent="Menu/MainControls" unique_id=1668787735]
+texture_filter = 1
+layout_mode = 2
+text = "> MONS"
+alignment = 0
+
+[node name="Run" type="Button" parent="Menu/MainControls" unique_id=551116508]
+texture_filter = 1
+layout_mode = 2
+text = "> RUN"
+alignment = 0
+
+[node name="Fight" type="ScrollContainer" parent="Menu" unique_id=1871562706 node_paths=PackedStringArray("options_parent")]
+layout_mode = 0
+offset_right = 191.0
+offset_bottom = 99.0
+script = ExtResource("2_knfhs")
+mode = 1
+options_parent = NodePath("FightOptions")
+
+[node name="FightOptions" type="VBoxContainer" parent="Menu/Fight" unique_id=117913390]
+layout_mode = 2
+
+[node name="Items" type="ScrollContainer" parent="Menu" unique_id=1269694443 node_paths=PackedStringArray("options_parent")]
+visible = false
+layout_mode = 0
+offset_right = 103.0
+offset_bottom = 85.0
+script = ExtResource("2_knfhs")
+mode = 2
+options_parent = NodePath("ItemOptions")
+
+[node name="ItemOptions" type="VBoxContainer" parent="Menu/Items" unique_id=1641622993]
+layout_mode = 2
+
+[node name="Monsters" type="ScrollContainer" parent="Menu" unique_id=45029549 node_paths=PackedStringArray("options_parent")]
+visible = false
+layout_mode = 0
+offset_right = 183.0
+offset_bottom = 85.0
+script = ExtResource("2_knfhs")
+mode = 3
+options_parent = NodePath("MonsterOptions")
+
+[node name="MonsterOptions" type="VBoxContainer" parent="Menu/Monsters" unique_id=1200970369]
+layout_mode = 2
+
+[node name="OptionBack" type="Button" parent="Menu" unique_id=1785376286]
+visible = false
+layout_mode = 0
+offset_top = 72.0
+offset_right = 40.0
+offset_bottom = 112.0
+text = "BACK"

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dcj3mcthwqxte"]
+
+[ext_resource type="Script" uid="uid://ball7vlteiawp" path="res://scripts/ui/monster_renderer_module.gd" id="1_3kg54"]
+[ext_resource type="Theme" uid="uid://bwqrj7njjbn07" path="res://ui/main.tres" id="2_4w4es"]
+[ext_resource type="Texture2D" uid="uid://q5ukv4r8xxs1" path="res://assets/art/monsters/turtle.png" id="3_3kg54"]
+
+[node name="MonsterRendererModule" type="HBoxContainer" unique_id=2117501079 node_paths=PackedStringArray("frame", "data_panel", "name_label", "hp_label", "hp_bar", "status_label", "sprite")]
+custom_minimum_size = Vector2(0, 58)
+theme = ExtResource("2_4w4es")
+script = ExtResource("1_3kg54")
+frame = NodePath("Frame")
+data_panel = NodePath("MonsterData")
+name_label = NodePath("MonsterData/Name")
+hp_label = NodePath("MonsterData/SubHp/HP")
+hp_bar = NodePath("MonsterData/HpBar")
+status_label = NodePath("MonsterData/SubHp/Status")
+sprite = NodePath("Frame/Sprite")
+
+[node name="MonsterData" type="VBoxContainer" parent="." unique_id=819791113]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MonsterData" unique_id=854143046]
+texture_filter = 1
+layout_mode = 2
+text = "MONSTERNAME"
+
+[node name="HpBar" type="ProgressBar" parent="MonsterData" unique_id=726605864]
+texture_filter = 1
+custom_minimum_size = Vector2(40, 4)
+layout_mode = 2
+theme = ExtResource("2_4w4es")
+show_percentage = false
+
+[node name="SubHp" type="HBoxContainer" parent="MonsterData" unique_id=1293606345]
+layout_mode = 2
+
+[node name="HP" type="Label" parent="MonsterData/SubHp" unique_id=1548951621]
+texture_filter = 1
+layout_mode = 2
+text = "23/23"
+
+[node name="Status" type="Label" parent="MonsterData/SubHp" unique_id=2059128285]
+texture_filter = 1
+layout_mode = 2
+text = "BRN"
+
+[node name="Frame" type="Control" parent="." unique_id=1140931639]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Sprite" type="Sprite2D" parent="Frame" unique_id=785519476]
+texture_filter = 1
+position = Vector2(32, 32)
+texture = ExtResource("3_3kg54")

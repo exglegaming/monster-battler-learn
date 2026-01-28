@@ -8,6 +8,7 @@ signal request_menu_fight
 signal request_menu_monsters
 signal request_menu_back
 signal request_menu_items
+signal request_menu_run
 
 # Events sent from controllers 
 signal on_battle_is_setup

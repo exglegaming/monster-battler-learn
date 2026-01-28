@@ -22,23 +22,23 @@ offset_right = 410.0
 offset_bottom = 178.0
 theme = ExtResource("2_trceg")
 script = ExtResource("3_a8y0u")
-enemy_mon_module = NodePath("Left/mon_renderer_module")
-player_mon_module = NodePath("Left/mon_renderer_module2")
-enemy_mon_state_dump = NodePath("Tabs/them")
-player_mon_state_dump = NodePath("Tabs/you")
+enemy_mon_module = NodePath("Left/MonsterRendererModule")
+player_mon_module = NodePath("Left/MonsterRendererModule2")
+enemy_mon_state_dump = NodePath("Tabs/Them")
+player_mon_state_dump = NodePath("Tabs/You")
 
 [node name="Left" type="VBoxContainer" parent="BattleRenderer" unique_id=1224435207]
 layout_mode = 0
 offset_right = 148.0
 offset_bottom = 164.0
 
-[node name="mon_renderer_module" parent="BattleRenderer/Left" unique_id=944578666 instance=ExtResource("4_jkv2x")]
+[node name="MonsterRendererModule" parent="BattleRenderer/Left" unique_id=944578666 instance=ExtResource("4_jkv2x")]
 layout_mode = 2
 
-[node name="mon_renderer_module2" parent="BattleRenderer/Left" unique_id=1488978885 instance=ExtResource("4_jkv2x")]
+[node name="MonsterRendererModule2" parent="BattleRenderer/Left" unique_id=1488978885 instance=ExtResource("4_jkv2x")]
 layout_mode = 2
 
-[node name="controls_menu" parent="BattleRenderer/Left" unique_id=324488067 instance=ExtResource("5_choun")]
+[node name="ControlsMenu" parent="BattleRenderer/Left" unique_id=324488067 instance=ExtResource("5_choun")]
 layout_mode = 2
 
 [node name="Tabs" type="TabContainer" parent="BattleRenderer" unique_id=901841336]
@@ -52,14 +52,14 @@ theme = ExtResource("2_trceg")
 theme_override_fonts/font = ExtResource("9_gqmmt")
 current_tab = 0
 
-[node name="log" parent="BattleRenderer/Tabs" unique_id=196764117 instance=ExtResource("7_ya4ey")]
+[node name="Log" parent="BattleRenderer/Tabs" unique_id=196764117 instance=ExtResource("7_ya4ey")]
 layout_mode = 2
 
-[node name="you" parent="BattleRenderer/Tabs" unique_id=2105883961 instance=ExtResource("8_eb6dy")]
+[node name="You" parent="BattleRenderer/Tabs" unique_id=2105883961 instance=ExtResource("8_eb6dy")]
 visible = false
 layout_mode = 2
 
-[node name="them" parent="BattleRenderer/Tabs" unique_id=1225780561 instance=ExtResource("8_eb6dy")]
+[node name="Them" parent="BattleRenderer/Tabs" unique_id=1225780561 instance=ExtResource("8_eb6dy")]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2

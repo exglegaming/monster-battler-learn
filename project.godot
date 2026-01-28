@@ -8,10 +8,6 @@
 
 config_version=5
 
-[animation]
-
-compatibility/default_parent_skeleton_in_mesh_instance_3d=true
-
 [application]
 
 config/name="Let's Build a Monster Battler"
@@ -21,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Events="*res://scripts/infra/events.gd"
-GameRunner="*res://scripts/controller/game_runner.gd"
+Events="*res://scripts/autoloads/events.gd"
+GameRunner="*res://scripts/autoloads/game_runner.gd"
 
 [debug]
 
@@ -49,4 +45,5 @@ folder_colors={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
 environment/defaults/default_clear_color=Color(0.607843, 0.737255, 0.0588235, 1)

@@ -37,6 +37,7 @@ layout_mode = 2
 
 [node name="MonsterRendererModule2" parent="BattleRenderer/Left" unique_id=1488978885 instance=ExtResource("4_jkv2x")]
 layout_mode = 2
+your_pov = true
 
 [node name="ControlsMenu" parent="BattleRenderer/Left" unique_id=324488067 instance=ExtResource("5_choun")]
 layout_mode = 2

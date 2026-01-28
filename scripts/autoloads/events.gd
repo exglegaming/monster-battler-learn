@@ -18,6 +18,7 @@ signal on_game_over
 signal on_menu_fight
 signal on_menu_select_monster
 signal on_menu_items
+signal on_monster_added_to_battle
 
 # Events sent internally
 signal request_log

@@ -14,8 +14,7 @@ func _ready():
 	Events.request_menu_fight.connect(handle_request_menu_fight)
 	Events.request_option_selected.connect(handle_menu_option_selected)
 	Events.request_menu_run.connect(handle_run)
-
-	setup_model()
+	Events.on_ui_ready.connect(setup_model)
 
 
 func setup_model() -> void:
@@ -33,8 +32,11 @@ func setup_model() -> void:
 	monster_two.hp = species_turtle.max_hp
 
 	game_state.player_monster = monster_one
+	Events.on_monster_added_to_battle.emit(monster_one, true)
+
 	game_state.opponent_monster = monster_two
-	return
+	Events.on_monster_added_to_battle.emit(monster_two, false)
+	
 
 	
 func handle_request_menu_fight():

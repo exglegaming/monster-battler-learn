@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpeciesResource" format=3 uid="uid://dk382ww1srg0a"]
+
+[ext_resource type="Script" uid="uid://c3qc5tg18ws4s" path="res://scripts/resources/species/species_resource.gd" id="1_afb5b"]
+[ext_resource type="Texture2D" uid="uid://q5ukv4r8xxs1" path="res://assets/art/monsters/turtle.png" id="1_nhitw"]
+
+[resource]
+script = ExtResource("1_afb5b")
+image = ExtResource("1_nhitw")
+name = "Turtle"
+max_hp = 30
+metadata/_custom_type_script = "uid://c3qc5tg18ws4s"
